@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    
+      .container {
+        width: 375px;
+        height: 800px;
+        position: relative;
+        background: #FCFCFC;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+    <div style="width: 375px; height: 800px; position: relative; background: #FCFCFC; border-radius: 10px; overflow: hidden">
+        <div style="width: 60px; height: 60px; left: 299px; top: 696px; position: absolute">
+          <div style="width: 50px; height: 50px; left: 5px; top: 5px; position: absolute; background: linear-gradient(91deg, #DEE5FF 0%, #809AFF 100%); border-radius: 9999px" ></div>
+          <div style="width: 60px; height: 60px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #89A1FF solid" button id="nextPageButton" ></div>
+          <div style="width: 24px; height: 24px; left: 18px; top: 18px; position: absolute">
+            <div style="width: 24px; height: 24px; left: 1px; top: 1px; position: absolute;" id="nextPageButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#DEE5FF" class="bi bi-caret-right" viewBox="0 0 16 16" >
+                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+              </svg>
+            </div>
+            
+          </div>
+        </div>
+        <div style="left: 16px; top: 499px; position: absolute; color: #2C2B2B; font-size: 20px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Get Burn</div>
+        <div style="width: 343px; left: 16px; top: 538px; position: absolute; color: #787878; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Let’s keep burning to achieve your goals, it hurts only temporarily, if you give up now you will be in pain forever</div>
+        <div style="left: 323px; top: 44px; position: absolute; color: #9FB2FF; font-size: 16px; font-family: Montserrat; font-weight: 500; text-decoration: underline; word-wrap: break-word" data-action="skip">Skip</div>
+        <img style="width: 352px; height: 234.61px; left: 11px; top: 156px; position: absolute" src="new2.jpg" />
+        <div style="width: 375px; height: 44px; left: 0px; top: 0px; position: absolute">
+          <div style="width: 66.66px; height: 11.67px; left: 294px; top: 16px; position: absolute">
+            <div style="width: 24.33px; height: 11.33px; left: 42.33px; top: 0px; position: absolute">
+              <div style="width: 22px; height: 11.33px; left: 0px; top: 0px; position: absolute; opacity: 0.35; border-radius: 2.67px; border: 1px #252727 solid"></div>
+              <div style="width: 1.33px; height: 4px; left: 23px; top: 3.67px; position: absolute; opacity: 0.40; background: #252727"></div>
+              <div style="width: 18px; height: 7.33px; left: 2px; top: 2px; position: absolute; background: #252727; border-radius: 1.33px"></div>
+            </div>
+            <img style="width: 15.33px; height: 11px; left: 22px; top: 0px; position: absolute" src="wifi.jpg" />
+            <img style="width: 17px; height: 10.67px; left: 0px; top: 1px; position: absolute" src="network.jpg" />
+          </div>
+          <div style="width: 54px; left: 14px; top: 12px; position: absolute; text-align: center; color: #252727; font-size: 15px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">9:41</div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         
+          var skipButton = document.querySelector("[data-action='skip']");
+
+          
+          skipButton.addEventListener("click", function() {
+            
+            window.location.href = "3.html";
+          });
+        });
+      
+          
+          const button = document.getElementById("nextPageButton");
+  
+       
+        button.addEventListener("click", function() {
+          window.location.href = '3.html';
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    
+      .container {
+        width: 375px;
+        height: 800px;
+        position: relative;
+        background: #FCFCFC;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+        /* CSS for email and password */
+        .input-label {
+            position: absolute;
+            left: 36px;
+            top: 153px; /* Adjusted position */
+            color: #7F7F7F;
+            font-size: 12px;
+            font-family: Montserrat;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .input-field {
+            width: 295px;
+            height: 30px;
+            position: absolute;
+            left: 36px;
+            top: 173px; /* Adjusted position */
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid #7F7F7F;
+            font-size: 14px;
+            font-family: Montserrat;
+            font-weight: 500;
+            color: #2C2B2B;
+            padding-left: 5px;
+            margin-top: 10px;
+            box-sizing: border-box; /* Added */
+        }
+
+        .password-label {
+            position: absolute;
+            left: 36px;
+            top: 227px; /* Adjusted position */
+            color: #7F7F7F;
+            font-size: 12px;
+            font-family: Montserrat;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .password-field {
+            width: 295px;
+            height: 30px;
+            position: absolute;
+            left: 36px;
+            top: 247px; 
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid #7F7F7F;
+            font-size: 14px;
+            font-family: Montserrat;
+            font-weight: 500;
+            color: #2C2B2B;
+            padding-left: 5px;
+            margin-top: 10px;
+            box-sizing: border-box; 
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+  <div style="width: 375px; height: 800px; position: relative; background: #FCFCFC; border-radius: 10px; overflow: hidden">
+    <div style="left: 16px; top: 68px; position: absolute; color: #2C2B2B; font-size: 20px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Welcome Back</div>
+    <form id="loginForm">
+        <!-- Email placeholder -->
+        <div onclick="toggleInput('emailPlaceholder')" style="width: 343px; height: 50px; left: 16px; top: 135px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+        <div id="emailPlaceholder" style="display: block; position: absolute; top: 145px; left: 36px; font-family: Montserrat; font-size: 16px; color: #7F7F7F;" contenteditable="true">Email</div>
+        <!-- Actual email input field -->
+        <input type="email" id="email" name="email" style="display: none; left: 36px; top: 145px; position: absolute; width: 300px; height: 30px; border-radius: 5px; border: 1px solid #ccc;">
+
+        <!-- Password placeholder -->
+        <div onclick="toggleInput('passwordPlaceholder')" style="width: 343px; height: 50px; left: 16px; top: 209px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+        <div id="passwordPlaceholder" style="display: block; position: absolute; top: 219px; left: 36px; font-family: Montserrat; font-size: 16px; color: #7F7F7F;" contenteditable="true">Password</div>
+        <!-- Actual password input field -->
+        <input type="password" id="password" name="password" style="display: none; left: 36px; top: 219px; position: absolute; width: 300px; height: 30px; border-radius: 5px; border: 1px solid #ccc;">
+
+        <div style="left: 21px; top: 269px; position: absolute; color: #7F7F7F; font-size: 12px; font-family: Montserrat; font-weight: 500; text-decoration: underline; word-wrap: break-word"><a href="forgot-password.html" style="color: inherit;">Forgot your password?</a></div>
+    </form>
+    <div onclick="redirectToCreateAccount()" style="left: 47px; top: 756px; position: absolute; cursor: pointer;"><span style="color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 500; text-decoration: underline; word-wrap: break-word">Don’t have an account yet? </span><span style="color: #829DFF; font-size: 12px; font-family: Montserrat; font-weight: 500; text-decoration: underline; word-wrap: break-word">Create an account</span></div>
+    <div id="signInButton" style="width: 343px; height: 50px; left: 16px; top: 310px; position: absolute; background: linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%); border-radius: 12px; cursor: pointer; text-align: center; line-height: 50px;">Sign In</div>
+    <div onclick="redirectToPage('5.html')" style="width: 44px; height: 44px; left: 134px; top: 686px; position: absolute; border-radius: 8px; border: 1px #7F7F7F solid; cursor: pointer;"></div>
+    <div onclick="redirectToPage('5.html')" style="width: 44px; height: 44px; left: 196px; top: 686px; position: absolute; border-radius: 8px; border: 1px #7F7F7F solid; cursor: pointer;"></div>
+    <div style="width: 18px; height: 18px; left: 145px; top: 696px; position: absolute">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="" class="bi bi-google" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+          </svg>
+    </div>
+    <div style="width: 8.93px; height: 17px; left: 207px; top: 696px; position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg></div>
+    <div style="width: 375px; height: 44px; left: 0px; top: 0px; position: absolute">
+        <div style="width: 66.66px; height: 11.67px; left: 294px; top: 16px; position: absolute">
+            <div style="width: 24.33px; height: 11.33px; left: 42.33px; top: 0px; position: absolute">
+                <div style="width: 22px; height: 11.33px; left: 0px; top: 0px; position: absolute; opacity: 0.35; border-radius: 2.67px; border: 1px #252727 solid"></div>
+                <div style="width: 1.33px; height: 4px; left: 23px; top: 3.67px; position: absolute; opacity: 0.40; background: #252727"></div>
+                <div style="width: 18px; height: 7.33px; left: 2px; top: 2px; position: absolute; background: #252727; border-radius: 1.33px"></div>
+            </div>
+            <img style="width: 15.33px; height: 11px; left: 22px; top: 0px; position: absolute" src="wifi.jpg" />
+            <img style="width: 17px; height: 10.67px; left: 0px; top: 1px; position: absolute" src="network.jpg" />
+        </div>
+        <div style="width: 54px; left: 14px; top: 12px; position: absolute; text-align: center; color: #252727; font-size: 15px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">9:41</div>
+    </div>
+</div>
+
+<script>
+    
+    function toggleInput(elementId) {
+        var placeholder = document.getElementById(elementId);
+        var input = document.getElementById(elementId.replace('Placeholder', ''));
+
+        if (placeholder.style.display === "block") {
+            placeholder.style.display = "none";
+            input.style.display = "block";
+            input.focus();
+        } else {
+            placeholder.style.display = "block";
+            input.style.display = "none";
+        }
+    }
+
+    
+    document.getElementById('signInButton').addEventListener('click', function() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+       
+        window.location.href = "5.html";
+    });
+
+    
+    function redirectToCreateAccount() {
+        window.location.href = "3.html";
+    }
+
+   
+    function redirectToPage(pageUrl) {
+        window.location.href = "https://accounts.google.com/";
+    }
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goals</title>
+</head>
+<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  
+    .container {
+      width: 375px;
+      height: 800px;
+      position: relative;
+      background: #FCFCFC;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+<body>
+
+<div style="width: 375px; height: 800px; position: relative; background: #FCFCFC; border-radius: 10px; overflow: hidden">
+  <div style="left: 78px; top: 68px; position: absolute; color: #2C2B2B; font-size: 20px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">What are your goals?</div>
+  
+  <div style="width: 343px; height: 50px; left: 16px; top: 135px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 153px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Weight Loss</div>
+  <input type="checkbox" style="width: 22px; height: 22px;left: 321px; top: 149px; position: absolute">
+  
+  <div style="width: 343px; height: 50px; left: 16px; top: 201px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 219px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Muscle Gain</div>
+  <input type="checkbox" style="width: 22px; height: 22px; left: 321px; top: 215px; position: absolute">
+
+  <div style="width: 343px; height: 50px; left: 16px; top: 267px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 285px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Flexibility and Mobility</div>
+  <input type="checkbox" style="width: 22px; height: 22px; left: 321px; top: 281px; position: absolute">
+
+  <div style="width: 343px; height: 50px; left: 16px; top: 333px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 351px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">General Fitness</div>
+  <input type="checkbox" style="width: 22px; height: 22px; left: 321px; top: 347px; position: absolute">
+
+  <div style="width: 343px; height: 50px; left: 16px; top: 399px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 417px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Event - specific training</div>
+  <input type="checkbox" style="width: 22px; height: 22px; left: 321px; top: 413px; position: absolute">
+
+  <div style="width: 343px; height: 50px; left: 16px; top: 465px; position: absolute; background: #F1F1F1; border-radius: 12px"></div>
+  <div style="left: 36px; top: 483px; position: absolute; color: #2C2B2B; font-size: 12px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Mindfulness and Mental Health</div>
+  <input type="checkbox" style="width: 22px; height: 22px; left: 321px; top: 479px; position: absolute">
+
+  <div style="width: 343px; height: 50px; left: 16px; top: 665px; position: absolute; background: linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%); border-radius: 12px"></div>
+  <div style="left: 154px; top: 680px; position: absolute; color: white; font-size: 16px; font-family: Montserrat; font-weight: 600; word-wrap: break-word" class="confirm-btn">Confirm</div>
+
+  <div style="width: 375px; height: 44px; left: 0px; top: 0px; position: absolute">
+  <div style="width: 66.66px; height: 11.67px; left: 294px; top: 16px; position: absolute">
+  <div style="width: 24.33px; height: 11.33px; left: 42.33px; top: 0px; position: absolute">
+    <div style="width: 22px; height: 11.33px; left: 0px; top: 0px; position: absolute; opacity: 0.35; border-radius: 2.67px; border: 1px #252727 solid"></div>
+    <div style="width: 1.33px; height: 4px; left: 23px; top: 3.67px; position: absolute; opacity: 0.40; background: #252727"></div>
+    <div style="width: 18px; height: 7.33px; left: 2px; top: 2px; position: absolute; background: #252727; border-radius: 1.33px"></div>
+</div>
+<img style="width: 15.33px; height: 11px; left: 22px; top: 0px; position: absolute" src="wifi.jpg" />
+<img style="width: 17px; height: 10.67px; left: 0px; top: 1px; position: absolute" src="network.jpg" />
+</div>
+<div style="width: 54px; left: 14px; top: 12px; position: absolute; text-align: center; color: #252727; font-size: 15px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">9:41</div>
+</div>
+</div>
+
+<script>
+  
+  document.querySelector('.confirm-btn').addEventListener('click', function() {
+    
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var selectedGoals = [];
+
+    
+    checkboxes.forEach(function(checkbox) {
+      if (checkbox.checked) {
+        
+        var goalText = checkbox.nextElementSibling.textContent;
+        selectedGoals.push(goalText);
+      }
+    });
+
+    
+    var selectedGoalsString = encodeURIComponent(selectedGoals.join(', '));
+    window.location.href = '6.html?goals=' + selectedGoalsString;
+  });
+</script>
+
+</body>
+</html>
